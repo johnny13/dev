@@ -1,0 +1,35 @@
+version: '3.7'
+services:
+    web:
+        build: 
+          context: .
+        image: nginx:latest
+        ports:
+          - "80:80"
+        depends_on:
+          - db
+        volumes:
+          - ./nginx/nginx.conf:/etc/nginx/conf.d/nginx.conf
+          - ./app:/app
+    php:
+        image: "huement-php"
+        build:
+          context: .
+          dockerfile: PHP.Dockerfile
+        volumes:
+          - ./app:/app
+    db:
+        image: mariadb:latest
+        restart: always
+        environment:
+          MYSQL_ROOT_PASSWORD: "root"
+          MYSQL_USER: "tutorial"
+          MYSQL_PASSWORD: "secret"
+          MYSQL_DATABASE: "huement_database"
+        volumes:
+          - mysqldata:/var/lib/mysql
+        ports:
+          - 3306:3306
+
+volumes:
+  mysqldata: {}
