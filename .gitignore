@@ -1,0 +1,64 @@
+.DS_Store
+!.DS_Store
+**/*/.DS_Store
+._.DS_Store
+**/.DS_Store
+**/._.DS_Store
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Built Items to ignore
+dist
+!dist/js
+!dist/css
+!dist/mojo.css
+!dist/mojo.css.map
+!dist/hi
+!dist/fonts
+
+# dist/cdn-test
+# dist/demo
+# dist/docs
+# dist/favicon
+# dist/fonts
+# # dist/*.html
+# dist/*.png
+# dist/*.svg
+
+node_modules/
+dist-ssr
+*.local
+.cache
+.cache/
+.cache/.stylelintcache/
+
+scss/_modular-scale.scss
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Mojo Files
+_assets
+.env
+node_modules
+README-shards.md
+.cache/.stylelintcache
+
+!*.gitkeep
+!./**/*.gitkeep
+
